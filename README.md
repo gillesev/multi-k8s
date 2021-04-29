@@ -1,0 +1,1 @@
+## This is Section 16 - Kubernetes Production Deployment project to deploy a ks8 containerized app into GKE.
