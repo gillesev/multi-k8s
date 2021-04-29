@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+      - name: complex-client
+        image: gillesev/complex-client@sha256:7f012d68ce964749c6ed87d6a7bba6c8ce31f3d5bee2dab767127c7464d13490
+        ports:
+          - containerPort: 3000
